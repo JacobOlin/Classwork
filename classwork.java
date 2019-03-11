@@ -1,6 +1,7 @@
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Random;
+import java.lang.Math;
 public class classwork{
 
   public static void main(String[] args) {
@@ -35,7 +36,7 @@ public class classwork{
       return end;
     }
     Random r  = new Random();
-    int index = start + r.nextInt()%(end - start + 1);
+    int index = start + Math.abs(r.nextInt()%(end - start + 1));
     int pivot = data[index];
     data[index] = data[start];
     data[start] = pivot;
